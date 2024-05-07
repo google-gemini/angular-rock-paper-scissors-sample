@@ -1,0 +1,259 @@
+/**
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@use './../../../styles/media-queries' as mq;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 3rem;
+  flex: 1;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.75rem;
+
+  a {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+
+    svg {
+      fill: var(--contrast);
+    }
+  }
+
+  .overall-score {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 500;
+    }
+
+    span {
+      background-color: color-mix(in srgb, var(--contrast) 3%, transparent);
+      padding: 0.625rem 1rem;
+      border-radius: 0.75rem;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      font-weight: 640;
+    }
+  }
+}
+
+.game-status {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+  height: 4rem;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 4rem;
+  margin: 5rem 0;
+
+  @include mq.for-tablet {
+    margin: 2.5rem 0;
+  }
+}
+
+.game-field {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+
+  @include mq.for-tablet {
+    flex-direction: column;
+  }
+
+  .player {
+    width: 640px;
+    height: 360px;
+    border-radius: 0.75rem;
+    position: relative;
+    overflow: hidden;
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem;
+
+      p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+      }
+    }
+
+    img {
+      height: 100%;
+    }
+
+    &.human {
+      .player-name {
+        fill: var(--primary);
+        height: 1.5rem;
+        z-index: 1;
+      }
+
+      .player-result {
+        color: var(--white);
+        z-index: 1;
+      }
+    }
+
+    &.computer {
+      background-color: var(--gray);
+
+      .player-result {
+        color: var(--black);
+      }
+
+      .player-name {
+        fill: var(--black);
+        height: 1.5rem;
+        width: inherit;
+      }
+
+      &--has-result {
+        background-color: var(--primary);
+
+        .player-result {
+          color: var(--white);
+        }
+
+        .player-name {
+          fill: var(--white);
+        }
+      }
+
+      img[alt='Rock'] {
+        height: 18rem;
+        rotate: -75deg;
+        position: absolute;
+        right: 2.5rem;
+        bottom: -10rem;
+      }
+
+      img[alt='Paper'] {
+        height: 18rem;
+        rotate: 90deg;
+        position: absolute;
+        right: 5rem;
+        bottom: -5rem;
+      }
+
+      img[alt='Scissors'] {
+        height: 18rem;
+        rotate: -90deg;
+        position: absolute;
+        right: 5rem;
+        bottom: -6.5rem;
+      }
+    }
+
+    video {
+      border-radius: 0.75rem;
+      position: absolute;
+      object-fit: cover;
+      transform: scale(-1, 1);
+      top: 0;
+      right: 0;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 360px;
+      width: 640px;
+    }
+
+    .loading-overlay {
+      height: 360px;
+      width: 640px;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+  }
+
+  .game-field-actions {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    .countdown,
+    .game-restart,
+    .game-start {
+      border-radius: 8.75rem;
+      padding: 1.5rem;
+      border: 5px solid var(--white);
+
+      img,
+      svg {
+        height: 2.625rem;
+        width: fit-content;
+      }
+    }
+
+    .game-start,
+    .game-restart {
+      background-color: var(--green);
+    }
+
+    .countdown {
+      background-color: var(--primary);
+    }
+  }
+}
+
+.game-results {
+  display: flex;
+  gap: 2.5rem;
+  height: 1.25rem;
+
+  @include mq.for-tablet {
+    display: none;
+  }
+
+  &-card {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 0.75rem;
+
+    .postfix {
+      opacity: 0.5;
+    }
+  }
+}

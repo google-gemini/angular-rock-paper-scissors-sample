@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ng-rock-paper-scissors-demo": {
+      "hosting": {
+        "rockpaperscissors": [
+          "ng-rock-paper-scissors-demo"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ng-rock-paper-scissors-demo"
+  }
+}

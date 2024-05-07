@@ -1,0 +1,92 @@
+/**
+ * Copyright 2024 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+:host {
+  width: 100%;
+  max-width: 1400px;
+  margin-bottom: 1.25rem;
+
+  .dark-mode & {
+    p {
+      opacity: 0.7;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1.25rem 0;
+  gap: 0.75rem;
+
+  p {
+    font-size: 0.875rem;
+    opacity: 0.4;
+  }
+
+  p,
+  a {
+    color: var(--contrast);
+    font-weight: 400;
+  }
+
+  .footer-container {
+    width: 100%;
+    border-radius: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+    backdrop-filter: blur(5rem);
+    background-color: color-mix(in srgb, var(--contrast) 10%, transparent);
+
+    &-left,
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    &-left {
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 0.5rem;
+      }
+
+      svg {
+        fill: var(--contrast);
+      }
+    }
+
+    &-right {
+      a {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  button {
+    height: 3rem;
+    border: none;
+    padding: 1.125rem 1.25rem;
+    border-radius: 6.25rem;
+  }
+}
