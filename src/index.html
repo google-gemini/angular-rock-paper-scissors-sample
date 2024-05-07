@@ -1,13 +1,43 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Rockpaperscissors</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <script>
+      // This logic must execute early, so that we set the necessary
+      // CSS classes to the document node and avoid unstyled content
+      // from appearing on the page.
+      const DARK_MODE_CLASS_NAME = 'dark-mode';
+      const LIGHT_MODE_CLASS_NAME = 'light-mode';
+
+      const prefersDark =
+        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const documentClassList = this.document.documentElement.classList;
+
+      // clearing classes before setting them.
+      this.document.documentElement.className = '';
+      if (prefersDark) {
+        documentClassList.add(DARK_MODE_CLASS_NAME);
+      } else {
+        documentClassList.add(LIGHT_MODE_CLASS_NAME);
+      }
+    </script>
+    <meta charset="utf-8" />
+    <title>Rock, Paper, Scissors</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Rock, Paper, Scissors" />
+    <meta name="description" content="Rock, Paper, Scissors game built with Angular and Gemini." />
+
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
 </html>

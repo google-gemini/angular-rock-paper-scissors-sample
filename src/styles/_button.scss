@@ -1,0 +1,21 @@
+@mixin button() {
+  button {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 1.125rem 1.25rem;
+    border-radius: 6.25rem;
+    font-weight: 500;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: var(--gray) !important;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+// Base Typography styles
+
+@mixin typography() {
+  :root {
+    --font: 'Google Sans', 'Helvetica', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font);
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  button {
+    font-family: var(--font);
+    font-weight: 500;
+  }
+}

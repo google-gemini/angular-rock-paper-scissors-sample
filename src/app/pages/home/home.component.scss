@@ -1,0 +1,108 @@
+@use './../../../styles/media-queries' as mq;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  margin: 0 0 4rem 0;
+
+  svg {
+    padding-top: 4rem;
+    margin: auto;
+    fill: var(--contrast);
+
+    &.mobile {
+      display: none;
+    }
+  }
+
+  @include mq.for-tablet {
+    svg.web {
+      display: none;
+    }
+
+    svg.mobile {
+      display: block;
+    }
+  }
+}
+
+.select-strategy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 1;
+
+  p {
+    opacity: 0.5;
+    font-size: 1.125rem;
+    margin: 0;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    button {
+      font-weight: 500;
+      font-size: 1.125rem;
+      justify-content: center;
+    }
+
+    @include mq.for-tablet {
+      width: 17.25rem;
+      flex-wrap: wrap;
+
+      button {
+        width: 8.125rem;
+        padding: 0.75rem 1.25rem;
+      }
+    }
+  }
+}
+
+.hand {
+  position: absolute;
+
+  &.hand-scissors {
+    top: -5rem;
+    left: -6rem;
+    rotate: 26deg;
+  }
+
+  &.hand-paper {
+    top: 40%;
+    right: -10rem;
+  }
+
+  &.hand-rock {
+    bottom: -2rem;
+    left: -7.5rem;
+    rotate: -17.88deg;
+  }
+
+  @include mq.for-tablet {
+    scale: 0.6;
+
+    &.hand-scissors {
+      top: -3rem;
+      left: -14rem;
+    }
+
+    &.hand-paper {
+      right: -14rem;
+    }
+
+    &.hand-rock {
+      bottom: 7rem;
+      left: -15rem;
+    }
+  }
+}

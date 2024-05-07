@@ -1,0 +1,11 @@
+:host {
+  display: block;
+
+  .light-mode & {
+    main.is-main-page {
+      background-image: url('/assets/background-white.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}

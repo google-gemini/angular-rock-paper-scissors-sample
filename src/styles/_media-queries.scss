@@ -1,0 +1,7 @@
+$breakpoint: 1320px;
+
+@mixin for-tablet {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}

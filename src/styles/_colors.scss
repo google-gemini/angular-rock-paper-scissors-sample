@@ -1,0 +1,26 @@
+@mixin root-definitions() {
+  --primary: #ff4081;
+  --contrast: #131517;
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #d9d9d9;
+  --green: #0acf6f;
+  --background: var(--white);
+}
+
+@mixin dark-mode-definitions() {
+  --primary: #ff4081;
+  --contrast: #ffffff;
+  --background: #131517;
+}
+
+.light-mode {
+  @include root-definitions();
+  background-color: var(--background);
+}
+
+.dark-mode {
+  @include root-definitions();
+  @include dark-mode-definitions();
+  background-color: var(--background);
+}

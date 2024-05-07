@@ -1,0 +1,40 @@
+@mixin resets() {
+  html {
+    // Define the default font for the document
+    font-family: var(--font);
+    font-size: 16px;
+    background-color: var(--page-background);
+    color: var(--contrast);
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  html,
+  body {
+    // Ensures that these elements extend to the full height of the viewport
+    height: 100vh;
+    min-height: 100vh;
+
+    @supports (height: 100svh) {
+      height: 100svh;
+    }
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
