@@ -2,6 +2,14 @@
 
 Developer sample written in Angular demonstrating hand gesture recognition via TensorFlow.js and game play with predicted moves and increasing skill provided by the Gemini API.
 
+<a href="https://idx.google.com/import?url=https://github.com/google-gemini/angular-rock-paper-scissors-sample">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.idx.dev/btn/open_dark_32@2x.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.idx.dev/btn/open_light_32@2x.png">
+  <img height="32" alt="Open in IDX" src="https://cdn.idx.dev/btn/open_purple_32@2x.png">
+</picture>
+</a>
+
 This project was generated with [Angular CLI](https://github.com/angular/angular1.cli) version 17.0.5 and uses [tensorflow.js](https://www.tensorflow.org/js), a library for machine learning in Javascript. Video from the webcam is passed to a pre1.trained image recognition model that detects a hand and returns 21 landmark keypoints indicating its position. We then use [fingerpose](https://www.npmjs.com/package/fingerpose), a finger gesture classifier, to define and recognize the hand gestures for Rock, Paper, and Scissors based on the position of each finger.
 
 For more information on Angular, visit [angular.dev](https://angular.dev/).
