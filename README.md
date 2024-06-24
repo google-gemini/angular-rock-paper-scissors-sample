@@ -12,6 +12,10 @@ Can you beat AI at the game?
 
 https://github.com/googlestaging/angular-rock-paper-scissors-sample/assets/15061394/a653dee3-a19e-4b21-be4a-be5a00336234
 
+<a href="https://idx.google.com/import?url=https://github.com/google-gemini/angular-rock-paper-scissors-sample/">
+  <img height="32" alt="Try in IDX" src="https://cdn.idx.dev/btn/try_dark_32.svg">
+</a>
+
 ## Get the demo running locally!
 
 1. Create a personal fork of the project on Github, then clone the fork on your local machine.
