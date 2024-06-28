@@ -20,7 +20,7 @@ https://github.com/googlestaging/angular-rock-paper-scissors-sample/assets/15061
 
 1. Open this project using the button above.
 1. Open the IDX integration panel to get an Gemini API key.
-1. Add the API key to the `.env` file
+1. Update the `API_KEY="…"` line in the `functions/.env` file
 
 ![IDX Integration](./idx-gemini-key.png)
 
