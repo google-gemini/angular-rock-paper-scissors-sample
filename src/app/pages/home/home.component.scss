@@ -122,3 +122,19 @@ header {
     }
   }
 }
+
+.api-key-banner {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+  & p {
+    padding: 16px;
+    background-color: var(--primary);
+    color: var(--background);
+    border-radius: 12px;
+    max-width: fit-content;
+  }
+}
