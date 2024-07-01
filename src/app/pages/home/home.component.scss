@@ -130,11 +130,31 @@ header {
   display: flex;
   justify-content: center;
   
-  & p {
+  & div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
     padding: 16px;
-    background-color: var(--primary);
-    color: var(--background);
+    border: 2px solid var(--primary);
+    color: var(--contrast);
     border-radius: 12px;
     max-width: fit-content;
+
+    & svg {
+      animation: wobble 1s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes wobble {
+  0%, 50% {
+    transform: translateX(0); 
+  }
+  12.5% {
+    transform: translateX(-5px);
+  }
+  37.5% {
+    transform: translateX(5px);
   }
 }
