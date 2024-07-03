@@ -122,3 +122,39 @@ header {
     }
   }
 }
+
+.api-key-banner {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+  & div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 16px;
+    border: 2px solid var(--primary);
+    color: var(--contrast);
+    border-radius: 12px;
+    max-width: fit-content;
+
+    & svg {
+      animation: wobble 1s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes wobble {
+  0%, 50% {
+    transform: translateX(0); 
+  }
+  12.5% {
+    transform: translateX(-5px);
+  }
+  37.5% {
+    transform: translateX(5px);
+  }
+}
