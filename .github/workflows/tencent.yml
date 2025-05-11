@@ -1,3 +1,9 @@
+[![Tencent Kubernetes Engine](https://github.com/https-gitcom/angular-rock-paper-scissors-sample/actions/workflows/tencent.yml/badge.svg)](https://github.com/https-gitcom/angular-rock-paper-scissors-sample/actions/workflows/tencent.yml)
+
+
+
+
+
 # This workflow will build a docker container, publish and deploy it to Tencent Kubernetes Engine (TKE) when there is a push to the "main" branch.
 #
 # To configure this workflow:
