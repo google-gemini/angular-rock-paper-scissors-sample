@@ -9,8 +9,7 @@ For more information on Angular, visit [angular.dev](https://angular.dev/).
 Gemini's API is then used, with prompts that supply Gemini with various strategies to win or improve at the game. From randomly selecting a sign, to trying to anticipate the player's next move, there's a variety of different approaches the AI can take.
 
 Can you beat AI at the game?
-
-https://github.com/googlestaging/angular-rock-paper-scissors-sample/assets/15061394/a653dee3-a19e-4b21-be4a-be5a00336234
+https://youtu.be/fqTDVZRgsmc?si=IZTSfaRHaORNlTd7
 
 ## Open the Demo in IDX
 
